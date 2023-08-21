@@ -53,17 +53,39 @@ header .search{
     display: flex;
     align-items: center;
     gap: .8rem;
+    align-items: center;
+    justify-content: center;
 }
 
 header .search button{
+    display: flex;
+    gap: .8rem;
     background-color: var(--back-btn-color);
-    padding: 1.6rem 3.2rem;
+    padding: 1.2rem 3.2rem;
     border: none;
     border-radius: .5rem;
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: uppercase;
-    
+    color: var(--primary-color);
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+header .search button:hover{
+    background-color: var(--primary-color);
+    color: var(--back-btn-color);
+    transition: 0.5s;
+}
+
+header .search svg path{
+    transition: 0.5s;
+}
+
+header .search button:hover svg path {
+    fill: var(--back-btn-color);
+    transition: 0.5s;
 }
 
 header .search input{
