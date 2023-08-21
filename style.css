@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --font-primary:'Roboto', sans-serif;
+    --primary-color:#FFFFFF;
+    --back-color:#000000;
+    --back-input-color:#06181C;
+    --back-btn-color:#065E7C;
+    --text-input-color:#7C7C8A;
+
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.6rem;
+    background-color: var(--back-color);
+}
+
+body *{
+    font-family: var(--font-primary);
+}
+
+#app{
+    max-width: 112rem ;
+    padding: 2.0rem;
+    margin: 0 auto;
+}
+
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.5rem 0;
+}
+
+header .search{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+header .search button{
+    background-color: var(--back-btn-color);
+    padding: 1.6rem 3.2rem;
+    border: none;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    
+}
+
+header .search input{
+    padding: 1.6rem;
+    border-radius: .5rem;
+    background-color: var(--back-input-color);
+    width: 46.2rem;
+    border: none;
+    color: var(--text-input-color);
+}
