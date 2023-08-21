@@ -10,6 +10,7 @@
     --back-color:#000000;
     --back-input-color:#06181C;
     --back-btn-color:#065E7C;
+    --back-thead-color:#092D38;
     --text-input-color:#7C7C8A;
 
     font-size: 62.5%;
@@ -95,4 +96,30 @@ header .search input{
     width: 46.2rem;
     border: none;
     color: var(--text-input-color);
+}
+
+table *{
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8.7rem;
+}
+
+table th{
+    background-color: var(--back-thead-color);
+    padding: 1.6rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+table th:first-child{
+    border-top-left-radius: 1.2rem;
+}
+
+table th:last-child{
+    border-top-right-radius: 1.2rem;
 }
