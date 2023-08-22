@@ -12,7 +12,8 @@
     --back-btn-color:#065E7C;
     --back-thead-color:#092D38;
     --back-tr-odd:#06161B;
-    --back-tr-even:#4A808C;
+    --back-tr-even:#06181C;
+    --border-input:#4A808C;
     --text-input-color:#7C7C8A;
 
     font-size: 62.5%;
@@ -74,6 +75,7 @@ header .search button{
     align-items: center;
     justify-content: center;
     transition: 0.5s;
+    cursor: pointer;
 }
 
 header .search button:hover{
@@ -108,14 +110,21 @@ table *{
 table{
     width: 100%;
     border-collapse: collapse;
-    margin-top: 8.7rem;
 }
+
 
 table th{
     background-color: var(--back-thead-color);
-    padding: 1.6rem 4rem 1.6rem 4rem;
+    padding: 1.6rem 0rem 1.6rem 4rem;
     font-weight: bold;
     text-align: left;
+}
+
+.bd_table{
+    margin-top: 8.7rem;
+    border: 1px solid var(--border-input);
+    border-radius: 1.2rem;
+    overflow: hidden;
 }
 
 table th:first-child{
@@ -127,24 +136,28 @@ table th:last-child{
 }
 
 table tbody tr:nth-child(odd){
-    background-color: var(--back-tr-odd);
+    background-color: var(--back-color);
 }
 
 table tbody tr:nth-child(even){
     background-color: var(--back-tr-even);
 }
 
+
+
 table td{
-    padding: 1.6rem 4rem 1.6rem 4rem;
-    
+    padding: 1.6rem 0rem 1.6rem 4rem;
+    text-align: left;
 }
 
 table .users{
     display: flex;
+    align-items: center;
+    gap: 1.6rem;
 }
 
 table .users img{
     width: 5rem;
     height: 5rem;
-    border-radius: 99999999px;
+    border-radius:50%;
 }
