@@ -11,6 +11,8 @@
     --back-input-color:#06181C;
     --back-btn-color:#065E7C;
     --back-thead-color:#092D38;
+    --back-tr-odd:#06161B;
+    --back-tr-even:#4A808C;
     --text-input-color:#7C7C8A;
 
     font-size: 62.5%;
@@ -111,7 +113,7 @@ table{
 
 table th{
     background-color: var(--back-thead-color);
-    padding: 1.6rem;
+    padding: 1.6rem 4rem 1.6rem 4rem;
     font-weight: bold;
     text-align: left;
 }
@@ -122,4 +124,27 @@ table th:first-child{
 
 table th:last-child{
     border-top-right-radius: 1.2rem;
+}
+
+table tbody tr:nth-child(odd){
+    background-color: var(--back-tr-odd);
+}
+
+table tbody tr:nth-child(even){
+    background-color: var(--back-tr-even);
+}
+
+table td{
+    padding: 1.6rem 4rem 1.6rem 4rem;
+    
+}
+
+table .users{
+    display: flex;
+}
+
+table .users img{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 99999999px;
 }
