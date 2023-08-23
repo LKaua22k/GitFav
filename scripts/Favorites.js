@@ -1,8 +1,9 @@
+import { GitHubUser } from "./githubUser.js"
+
 export class Favorites {
     constructor (root){
         this.root =  document.querySelector(root)
 
-        console.log(root)
     }
 }
 
@@ -20,7 +21,7 @@ export class FavoritesViews extends Favorites {
         this.removeAllTr()
     }
 
-    
+
     removeAllTr(){
         this.body.querySelectorAll('tr').forEach( (tr) => {
             tr.remove()
