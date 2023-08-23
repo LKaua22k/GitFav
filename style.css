@@ -15,6 +15,7 @@
     --back-tr-even:#06181C;
     --border-input:#4A808C;
     --text-input-color:#7C7C8A;
+    --text-red:#F75A68;
 
     font-size: 62.5%;
 }
@@ -26,6 +27,10 @@ body{
 
 body *{
     font-family: var(--font-primary);
+}
+
+a{
+    text-decoration: none;
 }
 
 #app{
@@ -162,4 +167,37 @@ table .users img{
     width: 5rem;
     height: 5rem;
     border-radius:50%;
+}
+
+table .users a {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: .5rem;
+}
+
+table .users a span{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+table .users a p{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+table .remove{
+    color: var(--text-red);
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+table .remove:hover{
+    filter: brightness(2);
+    transition: 0.5s;
 }
