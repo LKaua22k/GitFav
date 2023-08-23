@@ -47,7 +47,15 @@ export class FavoritesViews extends Favorites {
             row.querySelector('.users a span').textContent = user.name
             row.querySelector('.users a p').textContent = user.login
             row.querySelector('.users a').href = `https://github.com/${user.login}`
+            row.querySelector('.Repositories').textContent = user.public_repos
+            row.querySelector('.Followers').textContent = user.followers
+            row.querySelector('.remove').addEventListener('click', () => {
+                const isOk = confirm('Deseja excluir?')
 
+                if(isOk){
+                    this.delete(user)
+                }
+            })
 
 
             this.tbody.append(row)
