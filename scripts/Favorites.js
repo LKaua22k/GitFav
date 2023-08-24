@@ -27,7 +27,10 @@ export class Favorites {
 
                 const gitUser = await GitHubUser.search(username)
 
-                
+                if(gitUser.login === undefined){
+                    throw new Error('Não exisete')
+                }
+
                 this.entrises = [gitUser , ...this.entrises]
                 this.update()
                 this.save()
