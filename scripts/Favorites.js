@@ -17,13 +17,33 @@ export class Favorites {
     }
 
         async add(username){
-            const gitUser = await GitHubUser.search(username)
+            try{
 
+                const gitUserExist = this.entrises.find(entry => entry.login === username)
 
-            this.entrises = [gitUser , ...this.entrises]
-            this.update()
-            this.save()
+                if(gitUserExist){
+                    throw new Error('Ja Cadastrado')
+                }
+
+                const gitUser = await GitHubUser.search(username)
+
+                
+                this.entrises = [gitUser , ...this.entrises]
+                this.update()
+                this.save()
+            
+            
+            } catch(error){
+                alert(error.message)
+            }
         }
+        
+    delete(user){
+        const filterdEntrises = this.entrises.filter(entry => entry.login != user.login)
+
+        this.entrises = filterdEntrises
+        this.update()
+    }
 }
 
 
@@ -42,12 +62,20 @@ export class FavoritesViews extends Favorites {
         
         this.entrises.forEach((user) => {
             const row = this.CreateRow()
-
             row.querySelector('.users img').src = `https://github.com/${user.login}.png`
             row.querySelector('.users a span').textContent = user.name
             row.querySelector('.users a p').textContent = user.login
             row.querySelector('.users a').href = `https://github.com/${user.login}`
+            row.querySelector('.Repositories').textContent = user.public_repos
+            row.querySelector('.Followers').textContent = user.followers
+            row.querySelector('.remove').addEventListener('click', () =>{
+                const itsOk = confirm("Deseja esxcluir?")
 
+                if(itsOk){
+                    console.log('Removido')
+                    this.delete(user)
+                }
+            })
 
 
             this.tbody.append(row)
