@@ -52,6 +52,8 @@ a{
     border-width: 0;
 }
 
+/* Header */
+
 header{
     display: flex;
     justify-content: space-between;
@@ -109,6 +111,9 @@ header .search input{
     color: var(--text-input-color);
 }
 
+
+/* Table Thead */
+
 table *{
     font-size: 1.6rem;
     color: var(--primary-color);
@@ -119,20 +124,28 @@ table{
     border-collapse: collapse;
 }
 
-
-table th{
-    background-color: var(--back-thead-color);
-    padding: 1.6rem 0rem 1.6rem 4rem;
-    font-weight: bold;
-    text-align: left;
-}
-
 .bd_table{
     margin-top: 8.7rem;
     border: 1px solid var(--border-input);
     border-radius: 1.2rem;
     overflow: hidden;
+
 }
+
+
+table thead{
+    background-color: var(--back-thead-color);
+    text-align: left;
+}
+
+table tr th{
+    padding: 1.6rem 0;
+}
+
+thead tr{
+    display: flex;
+}
+
 
 table th:first-child{
     border-top-left-radius: 1.2rem;
@@ -140,8 +153,63 @@ table th:first-child{
 
 table th:last-child{
     border-top-right-radius: 1.2rem;
-    padding-right: 5.8rem;
 }
+
+thead tr th:nth-child(1),
+tbody tr td:nth-child(1){
+    width: 50.4rem;
+    padding-left: 4rem;
+}
+
+thead tr th:nth-child(2),
+tbody tr td:nth-child(2){
+    width: 21.8rem;
+    padding-left: 4rem;
+}
+
+thead tr th:nth-child(3),
+tbody tr td:nth-child(3){
+    width: 21.8rem;
+    padding-left: 2srem;
+}
+
+thead tr th:nth-child(4),
+tbody tr td:nth-child(4){
+    width: 12.8rem;
+    padding-left: 4rem;
+}
+
+
+/* Table tbody */
+
+
+table tbody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 52.2rem;
+    overflow: overlay;
+}
+
+tbody tr{
+    display: flex;
+    align-items: center;
+}
+
+tbody::-webkit-scrollbar{
+    width: .6rem;
+}
+
+tbody::-webkit-scrollbar-track{
+    background: none;
+}
+
+tbody::-webkit-scrollbar-thumb{
+    background: var(--border-input);
+    border-radius: 1rem;
+    border: 3px solid var(--border-input);
+}
+
 
 table tbody tr:nth-child(odd){
     background-color: var(--back-color);
@@ -206,28 +274,25 @@ table .remove:hover{
 }
 
 .Zfav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     height: 52.4rem;
 }
 
 tbody tr.Zfav td{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 62rem;
     font-weight: 700;
     font-size: 4rem;
     padding: 0;
+    gap: 6rem;
 }
 
-
-
-tbody tr.Zfav td:nth-child(2){
-    text-align: right;
-    padding-right: 1.6rem;
-    width:fit-content;
-}
-
-
-tbody tr.Zfav td:nth-child(4){
-    text-align: left;
-    padding-right: 1.6rem;
-}
 
 tbody tr.Zfav td p{
     font-weight: 700;
