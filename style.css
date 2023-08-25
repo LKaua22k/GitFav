@@ -16,6 +16,7 @@
     --border-input:#4A808C;
     --text-input-color:#7C7C8A;
     --text-red:#F75A68;
+    --color-star:#4E5455;
 
     font-size: 62.5%;
 }
@@ -139,6 +140,7 @@ table th:first-child{
 
 table th:last-child{
     border-top-right-radius: 1.2rem;
+    padding-right: 5.8rem;
 }
 
 table tbody tr:nth-child(odd){
@@ -201,4 +203,34 @@ table .remove{
 table .remove:hover{
     filter: brightness(2);
     transition: 0.5s;
+}
+
+.Zfav{
+    height: 52.4rem;
+}
+
+tbody tr.Zfav td{
+    font-weight: 700;
+    font-size: 4rem;
+    padding: 0;
+}
+
+
+
+tbody tr.Zfav td:nth-child(2){
+    text-align: right;
+    padding-right: 1.6rem;
+    width:fit-content;
+}
+
+
+tbody tr.Zfav td:nth-child(4){
+    text-align: left;
+    padding-right: 1.6rem;
+}
+
+tbody tr.Zfav td p{
+    font-weight: 700;
+    font-size: 4rem;
+    color: var(--color-star);
 }
